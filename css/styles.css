@@ -113,7 +113,7 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: #4a90be;
 }
 
 .dev-icons {
@@ -176,9 +176,6 @@ section.resume-section .resume-section-content {
 
 .back-img {
   background-image: url('../media/background.jpeg'); 
-  background-blend-mode: lighten;
   background-size: cover;
-  resize: both;
-  overflow: scroll;
 
 }
