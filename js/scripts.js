@@ -42,17 +42,16 @@
 })(jQuery); // End of use strict
 
 
-// vanilla JS
-// init Masonry
+// external js: masonry.pkgd.js, imagesloaded.pkgd.js
+
 var grid = document.querySelector('.grid');
+var msnry;
 
-var msnry = new Masonry( grid, {
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer',
-  percentPosition: true
-});
-
-imagesLoaded( grid ).on( 'progress', function() {
-  // layout Masonry after each image loads
-  msnry.layout();
+imagesLoaded( grid, function() {
+  // init Isotope after all images have loaded
+  msnry = new Masonry( grid, {
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
 });
